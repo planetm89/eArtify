@@ -1,7 +1,10 @@
-<mat-grid-list cols="4" rowHeight="100px" gutterSize="5px"> <mat-grid-tile *ngFor="let tile of tiles"
-[colspan]="tile.cols"
-[rowspan]="tile.rows"
-[style.border]="tile.border">
-<img src="./assets/images/bg.png">
-</mat-grid-tile>
+<mat-grid-list cols="4" >
+    <div *ngFor="let p of products" class = "prod-list">
+        
+
+        <mat-grid-tile>
+            <mat-grid-tile-header>Bag: {{p.name}}</mat-grid-tile-header>
+            <img height="350" width="300" src="{{p.image_url}}">
+        </mat-grid-tile>    
+    </div>
 </mat-grid-list>
